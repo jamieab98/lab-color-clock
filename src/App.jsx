@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <p>The current time is: {formattedTime}</p>
+      <p>The current time is {formattedTime}</p>
     </>
   )
 }
