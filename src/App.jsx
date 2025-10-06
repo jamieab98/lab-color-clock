@@ -1,16 +1,26 @@
 import './App.css'
-import {format, parseISO } from 'date-fns';
+import { format } from 'date-fns';
+import React, { useState, useEffect } from 'react';
 
 function App() {
-  const today = new Date();
-  const formattedDate = format(today, 'do MMMM yyyy');
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formattedTime = format(currentTime, 'hh:mm:ss a');
 
   return (
     <>
-      <p>Today is {formattedDate}</p>
-      <p>Clock Set-Up</p>
+      <p>The current time is: {formattedTime}</p>
     </>
   )
 }
 
-export default App
+
+export default App;
