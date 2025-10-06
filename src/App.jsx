@@ -15,9 +15,22 @@ function App() {
 
   const formattedTime = format(currentTime, 'hh:mm:ss a');
 
+  const today = new Date();
+  const dayOfWeek = format(today, 'EEEE');
+  const date = format(today, 'd')
+
   return (
     <>
-      <p>The current time is {formattedTime}</p>
+      <div className = "heading">
+        <p>Current Time:</p>
+      </div>
+      <div className = "clock">
+        <p>{formattedTime}</p>
+      </div>
+      <div className = "calendar">
+        <div className = "day">{dayOfWeek}</div>
+        <div className = "date">{date}</div>
+      </div>    
     </>
   )
 }
