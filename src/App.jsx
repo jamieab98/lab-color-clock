@@ -19,6 +19,7 @@ function App() {
   const today = new Date();
   const dayOfWeek = format(today, 'EEEE');
   const date = format(today, 'd')
+  const month = format(today, 'MMMM');
 
   //this is the information being shown on the page
   return (
@@ -30,6 +31,7 @@ function App() {
       <div className = "calendar">
         <div className = "day">{dayOfWeek}</div>
         <div className = "date">{date}</div>
+        <div className = "month">{month}</div>
       </div>    
     </>
   )
