@@ -3,13 +3,15 @@
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  width: 30%;
+  width: 200px;
 
 }
 
 .timePortion {
   display: flex;
+  gap: 50px;
   height: 100px;
+  width: 500px;
 }
 
 .clock {
@@ -17,7 +19,7 @@
   align-items: center;
   justify-content: center;
   font-size: 2em;
-  width: 30%;
+  width: 250px;
   border: 2px solid gray;
   border-radius: 15px;
   background-color: black;
